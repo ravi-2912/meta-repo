@@ -1,0 +1,3 @@
+[submodule "apps/cra-meta-repo-app1"]
+	path = apps/cra-meta-repo-app1
+	url = https://github.com/ravi-2912/cra-meta-repo-app1.git
