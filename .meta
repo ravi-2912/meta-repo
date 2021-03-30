@@ -1,3 +1,5 @@
 {
-    "projects": {}
+  "projects": {
+    "apps\\cra-meta-repo-app1": "https://github.com/ravi-2912/cra-meta-repo-app1.git",
+  }
 }
