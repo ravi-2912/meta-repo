@@ -1,0 +1,14 @@
+{
+    "name": "cra-meta-repo",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "common/*",
+            "apps/*/*"
+        ]
+    },
+    "devDependencies": {
+        "lerna": "^4.0.0",
+        "meta": "^2.2.15"
+    }
+}
