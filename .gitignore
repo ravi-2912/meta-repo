@@ -116,8 +116,8 @@ dist
 .pnp.*
 
 # apps and common
-/apps\
-/common\
+apps/
+common/
 
 # meta created
 /apps\cra-meta-repo-app1/
