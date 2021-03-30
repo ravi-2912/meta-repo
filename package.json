@@ -7,6 +7,21 @@
             "apps/*/*"
         ]
     },
+    "scripts": {
+        "meta-pull": "yarn meta git pull",
+        "meta-push": "yarn meta git push",
+        "meta-commit": "yarn meta git commit",
+        "meta-branch": "yarn meta git branch",
+        "meta-status": "yarn meta git status",
+        "meta-update": "yarn meta git update",
+        "meta-clean": "yarn meta git clean -fd",
+        "meta-checkout": "yarn meta git checkout",
+        "meta-create": "yarn meta project create",
+        "meta-import": "yarn meta project import",
+        "meta-new-branch": "yarn meta git checkout -b",
+        "lerna-version": "yarn lerna version --yes --no-push --conventional-commits --no-changelog --no-git-tag-version",
+        "lerna-clean": "yarn lerna clean --yes"
+    },
     "devDependencies": {
         "lerna": "^4.0.0",
         "meta": "^2.2.15"
