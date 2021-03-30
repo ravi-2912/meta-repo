@@ -42,7 +42,14 @@ Add following lines to the [`.gitmodules`](.gitmodules)
 [submodule "apps/cra-meta-repo-app1"]
     path = apps/cra-meta-repo-app1
     url = https://github.com/ravi-2912/cra-meta-repo-app1.git
+
+[submodule "common/cra-meta-repo-ui1"]
+    path = common/cra-meta-repo-ui1
+    url = https://github.com/ravi-2912/cra-meta-repo-ui1.git
+
 ```
+
+Add a single blank line between two submodules and at the end of file.
 
 ### Check `.gitignore`
 
