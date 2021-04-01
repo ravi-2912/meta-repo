@@ -18,9 +18,16 @@
         "meta-import": "yarn meta project import",
         "meta-new-branch": "yarn meta git checkout -b",
         "lerna-version": "yarn lerna version --yes --no-push --conventional-commits --no-changelog --no-git-tag-version",
-        "lerna-clean": "yarn lerna clean --yes"
+        "lerna-clean": "yarn lerna clean --yes",
+        "lerna-list": "yarn lerna la",
+        "lerna-run": "yarn lerna run --parallel --stream",
+        "lerna-exec": "yarn lerna exec -- ",
+        "kill-ports": "yarn kill-port --port 3000,6006",
+        "start": "yarn kill-ports && yarn concurrently -n \"app,ui1\" \"yarn workspace cra-meta-repo-app1 start\" \"yarn workspace cra-meta-repo-ui1 start\""
     },
     "devDependencies": {
+        "concurrently": "^6.0.0",
+        "kill-port": "^1.6.1",
         "lerna": "^4.0.0",
         "meta": "^2.2.15"
     }
