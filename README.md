@@ -11,7 +11,7 @@ This code base uses the following projects:
 - [cra-meta-repo-ui1](https://github.com/ravi-2912/cra-meta-repo-ui1): A default  create-react-app, initialized with [Storybook](https://storybook.js.org/) that provides a UI component i.e. a default button.
 - [cra-meta-repo-app1](https://github.com/ravi-2912/cra-meta-repo-app1): A default create-react-app that uses custom button from [cra-meta-repo-ui1](https://github.com/ravi-2912/cra-meta-repo-ui1) above.
 
-## Metarepo structure
+### Metarepo structure
 
 The root folder contains the workspace `package.json`, `lerna.json`, `.meta`, `.gitignore` and `.gitmodules` files. There are two folders `apps/` and `common/` where projects (apps. libraries, packages, etc.) can be added.
 
@@ -55,6 +55,8 @@ Tree is created using the following command
 dree parse ./ --dest ./ --name result --exclude node_modules --depth 3
 ```
 
+---
+
 ## Initial setup
 
 After cloning the repo run the command.
@@ -75,15 +77,34 @@ Finally install the projects dependencies.
 yarn install
 ```
 
-## Running the App and Storybook
+### Running scripts from projects
+
+To run using `start` scripts from each project using `lerna run`, use the following command.
+
+```bash
+yarn start
+```
+
+To run other scripts such as `build` use the command below.
+
+```bash
+yarn lerna-run <script-name>
+yarn lerna-run build
+```
+
+To run `start` scripts using `concurrently` package
+
+```bash
+yarn start-concurrently
+```
 
 Use the following command to run a script from a workspace
 
 ```bash
-yarn workspace <local-package-name> <script-name>
+yarn workspace <your-meta-repo-package-name> <script-name>
 ```
 
-Use the following commands to run the React app and Storybook.
+Use the following commands to run the react app and storybook using `yarn workspace`.
 
 ```bash
 yarn worskspace cra-meta-repo-app1 start
@@ -126,6 +147,8 @@ Add a single blank line between two submodules and at the end of file.
 
 Check [`.gitignore`](.gitignore) that it includes the `[destinationFolder]` from above.
 
+---
+
 ## Meta push/pull to remote
 
 Execute git push or pull command for all workspace repos including the root repo.
@@ -135,19 +158,17 @@ yarn meta-push
 yarn meta-pull
 ```
 
-## Creating new meta branch
+---
 
-## Meta committing
+## Adding new package
 
-## Create new meta project
-
-## Cross local package sharing
-
-## Adding new `npmjs` package
+Use `yarn workspace` command to add external/internal packages
 
 ```bash
-yarn workspace <local-package-name> add <npmjs-package-name> --dev
+yarn workspace <local-meta-repo-package-name> add <package-name> --dev
 ```
+
+An example is below
 
 ```bash
 yarn workspace cra-meta-repo-ui1 add styled-system
@@ -158,6 +179,20 @@ Adding package to root level, use the command below
 ```bash
 yarn add -D -W <package-name>
 ```
+
+---
+
+## Creating new meta branch, meta committing and new meta project
+
+Read [`meta` documentation](https://github.com/mateodelnorte/meta#readme). All `meta` commands are provided in the root script and can be used ass follows.
+
+```bash
+yarn meta-<command> <args>
+```
+
+Important `meta` commands include creating a branch and committing.
+
+---
 
 ## References
 
